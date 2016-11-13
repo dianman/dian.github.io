@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.f{
+		width: 20px;
+		height: 20px;
+		border: 1px solid gray;
+		background-color: blue;
+		list-style: none;
+		float: left;
+		color: white;
+		margin-left: 10px;
+	}
+
+	</style>
+</head>
+<body>
+	<img src="images/1.jpg" alt="" id="cd">
+	<script src="script/jquery.js"></script>
+	<ul id="ab">
+		<li class="f">1</li>
+		<li class="f">2</li>
+		<li class="f">3</li>
+		<li class="f">4</li>
+		<li class="f">5</li>
+	</ul>
+	<script>
+		var arr =["images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg","images/5.jpg",]
+		$("#ab li").click(function(){
+			var number = $(this).index();
+			var src =arr[number];
+			$("#cd").attr("src",src);
+		})
+
+	</script>
+	
+</body>
+</html>
